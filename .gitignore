@@ -1,4 +1,5 @@
 cypress/videos
 node_modules
 .idea
-mochawesome-report
+mochawesome-report/*
+cypress/results
