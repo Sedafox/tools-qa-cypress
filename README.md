@@ -1,0 +1,1 @@
+Run the following to run test and get mocha report: npm run test

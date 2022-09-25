@@ -19,7 +19,7 @@ describe('Tests the Elements on the Elements page', () => {
     //End of Text Box
 
     //CheckBox
-    it.only('Clicks the Check Box Option from the Elements Menu, and select the Home Check Box', () => {
+    it('Clicks the Check Box Option from the Elements Menu, and select the Home Check Box', () => {
         elementsPage.checkBoxOptionMenu().click()
         elementsPage.homeCheckBoxUnchecked().click()
         elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
