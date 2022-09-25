@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome-report/mochawesome.json && marge mochawesome-report/* && rm -rf cypress/results"
+    "test": "rm -rf cypress/results && cypress run && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome-report/mochawesome.json && marge mochawesome-report/* && rm -rf cypress/results"
   },
   "keywords": [],
   "author": "",
