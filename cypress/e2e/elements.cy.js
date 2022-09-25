@@ -6,6 +6,7 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.clickOnElmntButtonFromHome()
     })
 
+    //TextBox
     it('Clicks the Text Box option from the Elements Menu, enters all info and clicks submit', () => {
         elementsPage.textBoxMenuOption().click()
         elementsPage.fullNameField().type('Henry Ford')
@@ -15,6 +16,9 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.textBoxSubmitButton().click()
         elementsPage.textBoxOutput().should('be.visible')
     })
+    //End of Text Box
+
+    //CheckBox
     it.only('Clicks the Check Box Option from the Elements Menu, and select the Home Check Box', () => {
         elementsPage.checkBoxOptionMenu().click()
         elementsPage.homeCheckBoxUnchecked().click()
