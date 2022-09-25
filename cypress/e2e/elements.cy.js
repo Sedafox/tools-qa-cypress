@@ -15,4 +15,9 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.textBoxSubmitButton().click()
         elementsPage.textBoxOutput().should('be.visible')
     })
+    it.only('Clicks the Check Box Option from the Elements Menu, and select the Home Check Box', () => {
+        elementsPage.checkBoxOptionMenu().click()
+        elementsPage.homeCheckBoxUnchecked().click()
+        elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
+    })
 })
