@@ -24,4 +24,15 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.homeCheckBoxUnchecked().click()
         elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
     })
+    it.only('Unfolds the Check Box Menu and selects Desktop, Documents, and Downloads manually', () => {
+        elementsPage.checkBoxOptionMenu().click()
+        elementsPage.homeCheckBoxDropDownUnfolded().click()
+        elementsPage.desktopCheckBoxUnchecked().click()
+        elementsPage.documentsCheckBoxUnchecked().click()
+        elementsPage.downloadsCheckBoxUnchecked().click()
+        elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
+    })
+    it('Unfolds all check boxes and selects the base file checkboxes', () => {
+
+    })
 })
