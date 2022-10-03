@@ -32,6 +32,15 @@ class ElementsPage extends Base {
     homeCheckBoxDropDownUnfolded(){
         return cy.get('.rct-collapse')
     }
+    desktopDropDownUnfolded(){
+        return cy.get('.rct-node-expanded > ol > :nth-child(1) > .rct-text > .rct-collapse > .rct-icon')
+    }
+    documentsDropDownUnfolded(){
+        return cy.get('#tree-node > :nth-child(2) > :nth-child(1) > :nth-child(2) > :nth-child(2) > .rct-text > .rct-collapse > .rct-icon')
+    }
+    downloadsDropDownUnfolded(){
+        return cy.get(':nth-child(3) > .rct-text > .rct-collapse > .rct-icon')
+    }
     homeCheckBoxUnchecked(){
         return cy.get('span').contains('Home')
                  .find('svg[class="rct-icon rct-icon-uncheck"]')
