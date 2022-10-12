@@ -32,7 +32,7 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.downloadsCheckBoxUnchecked().click()
         elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
     })
-    it.only('Unfolds all check boxes and selects the base file checkboxes', () => {
+    it('Unfolds all check boxes and selects the base file checkboxes', () => {
         elementsPage.checkBoxOptionMenu().click()
         elementsPage.homeCheckBoxDropDownUnfolded().click()
         elementsPage.desktopDropDownUnfolded().click()
@@ -46,4 +46,5 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.excelFileCheckBoxUnchecked().click()
         elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
     })
+    //End of Checkbox
 })
