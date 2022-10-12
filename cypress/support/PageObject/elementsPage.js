@@ -87,6 +87,30 @@ class ElementsPage extends Base {
     //END OF CHECK BOX FUNCTIONS
 
     //RADIO BUTTON FUNCTIONS
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+    radioButtonOptionMenu(){
+        return cy.get('ul[class="menu-list"] > li[id="item-2"]').contains('Radio Button')
+    }
+    yesRadioButton(){
+        return cy.get('#yesRadio')
+    }
+    impressiveRadioButton(){
+        return cy.get('#impressiveRadio')
+    }
+    noRadioButton(){
+        return cy.get('#noRadio')
+    }
+    youHaveSelected(){
+        return cy.get('.mt-3')
+    }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 }
 export default ElementsPage

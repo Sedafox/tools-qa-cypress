@@ -47,4 +47,33 @@ describe('Tests the Elements on the Elements page', () => {
         elementsPage.checkBoxDisplayResults().should('contain.text','You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
     })
     //End of Checkbox
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+
+    //Radio Button
+    it('clicks the yes radio button and verifies the results', () => {
+        elementsPage.radioButtonOptionMenu().click()
+        elementsPage.yesRadioButton().check({force:true}) //We have to force this because it thinks another element is covering it... which its not.
+        elementsPage.youHaveSelected().should('be.visible')
+        elementsPage.youHaveSelected().should('have.text', 'You have selected Yes')
+    })
+    it('clicks the Impressive radio button and verifies the results', () => {
+        elementsPage.radioButtonOptionMenu().click()
+        elementsPage.impressiveRadioButton().check({force:true})
+        elementsPage.youHaveSelected().should('be.visible')
+        elementsPage.youHaveSelected().should('have.text', 'You have selected Impressive')
+    })
+    it('verifies the no button is not able to be clicked', () => {
+        elementsPage.radioButtonOptionMenu().click()
+        elementsPage.noRadioButton().should('be.disabled')
+    })
+    //End of Radio Button
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 })
