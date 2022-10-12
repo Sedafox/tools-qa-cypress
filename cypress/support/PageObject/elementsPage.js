@@ -14,31 +14,79 @@ class ElementsPage extends Base {
     currentAddressField(){
         return cy.get('textarea[id="currentAddress"]')
     }
-
     permanentAddressField(){
         return cy.get('textarea[id="permanentAddress"]')
     }
-
     textBoxSubmitButton(){
         return cy.get('button[id="submit"]')
     }
-
     textBoxOutput(){
         return cy.get('div[id="output"]')
     }
     // END OF TEXT BOX FUNCTIONS
 
     //CHECK BOX FUNCTIONS
-
     checkBoxOptionMenu(){
         return cy.get('ul[class="menu-list"] > li[id="item-1"]').contains('Check Box')
     }
+    homeCheckBoxDropDownUnfolded(){
+        return cy.get('.rct-collapse')
+    }
+    desktopDropDownUnfolded(){
+        return cy.get('.rct-node-expanded > ol > :nth-child(1) > .rct-text > .rct-collapse > .rct-icon')
+    }
+    documentsDropDownUnfolded(){
+        return cy.get('#tree-node > :nth-child(2) > :nth-child(1) > :nth-child(2) > :nth-child(2) > .rct-text > .rct-collapse > .rct-icon')
+    }
+    downloadsDropDownUnfolded(){
+        return cy.get(':nth-child(3) > .rct-text > .rct-collapse > .rct-icon')
+    }
     homeCheckBoxUnchecked(){
-        return cy.get('path[d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"]').parent()
-        //This path is the only unique identifier for the checkboxes, and it changes when you check the check box. So annoying!
+        return cy.get('span').contains('Home')
+                 .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    desktopCheckBoxUnchecked(){
+        return cy.get('span').contains('Desktop')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    documentsCheckBoxUnchecked(){
+        return cy.get('span').contains('Documents')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    downloadsCheckBoxUnchecked(){
+        return cy.get('span').contains('Downloads')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    notesCheckBoxUnchecked(){
+        return cy.get('span').contains('Notes')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    commandsCheckBoxUnchecked(){
+        return cy.get('span').contains('Commands')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    workspaceCheckBoxUnchecked(){
+        return cy.get('span').contains('WorkSpace')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    officeCheckBoxUnchecked(){
+        return cy.get('span').contains('Office')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    wordFileCheckBoxUnchecked(){
+        return cy.get('span').contains('Word File.doc')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
+    }
+    excelFileCheckBoxUnchecked(){
+        return cy.get('span').contains('Excel File.doc')
+            .find('svg[class="rct-icon rct-icon-uncheck"]')
     }
     checkBoxDisplayResults(){
         return cy.get('#result')
     }
+    //END OF CHECK BOX FUNCTIONS
+
+    //RADIO BUTTON FUNCTIONS
+
 }
 export default ElementsPage
